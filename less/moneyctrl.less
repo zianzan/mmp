@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@import "var";
+@import "adapter";
+@import "comment";
+//折扣商品
+.disabled_product{
+  margin-top: 10rem/@size;
+  width: 100%;
+  .media{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 5rem/@size;
+    .media-left{
+      width: 100rem/@size;
+      height: 100rem/@size;
+      img{
+        width: 100rem/@size;
+        height: 100rem/@size;
+      }
+    }
+  }
+}
+.media-body{
+  position: relative;
+  p{
+    color: #6d6d72;
+    margin-top: 30rem/@size;
+  }
+}
+.media-body h4{
+  font-size: 12rem/@size;
+  padding-top: 10rem/@size;
+  span{
+    color: red;
+  }
+}
+.comment_num{
+  position: absolute;
+  right: 20rem/@size;
+  top: 70rem/@size;
+  span:first-child{
+    color: #555;
+  }
+}

@@ -1,0 +1,176 @@
+@charset "UTF-8";
+@import "var";
+@import "adapter";
+.html,body{
+  width: 100%;
+  height: 100%;
+}
+.mmb_container{
+  background-color: white;
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  bottom: 20rem/@size;
+}
+.mmb_header{
+  width:100%;
+  height: 60rem/@size;
+  background-color: @mmbcolor;
+  padding: 15rem/@size;
+  position: relative;
+span{
+  color: white;
+  line-height: 30rem/@size;
+  font-size: 20rem/@size;
+}
+  h4{
+    text-align: center;
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 20rem/@size;
+    font-weight: 700;
+    line-height: 40rem/@size;
+  }
+}
+
+.mmb_logo {
+  width: 250rem/@size;
+  height: 30rem/@size;
+  position: absolute;
+  top: 15rem/50;
+  left: 15rem/@size;
+}
+.mmb_app{
+  width: 34rem/@size;
+  height: 34rem/@size;
+  position: absolute;
+  top: 15rem/50;
+  right: 15rem/@size;
+}
+.mmb_search {
+  width: 100%;
+  height: 50rem/@size;
+  background-color: white;
+  padding: 10rem/@size 15rem/@size;
+  position: relative;
+  input[type=text] {
+    position: absolute;
+    top: 10rem/@size;
+    height: 30rem/@size;
+    width: 85%;
+    border: none;
+    background-color: #f1f1f1;
+    border-radius: 20rem/@size;
+    padding-left: 30rem/@size;
+    font-size: 12rem/@size;
+  }
+  button{
+    border: none;
+    position: absolute;
+    height: 30rem/@size;
+    width: 70rem/@size;
+    background-color: @mmbcolor;
+    color: white;
+    top: 10rem/@size;
+    right: 15rem/@size;
+    border-radius: 20rem/@size;
+    font-size: 12rem/@size;
+    text-align: center;
+    line-height: 10rem/@size;
+  }
+}
+
+//分类面包屑
+.list_nav{
+  width:100%;
+  //height: 50px;
+  background-color: @boxcolor;
+  padding: 10rem/@size;
+  border: 1px solid #c0c0c0;
+  position: relative;
+.list_nav_margin{
+  padding-right: 50px;
+  width: 100%;
+}
+  a{
+    color: black;
+    font-size: 12rem/@size;
+  }
+  input[type=button]{
+    position: absolute;
+    height: 30px;
+    right: 10rem/@size;
+    top: 5rem/@size;
+    font-size: 12rem/@size;
+    background-color: @boxcolor;
+  }
+}
+
+
+
+//登录
+.mmb_login{
+  height: 40rem/@size;
+  margin-top: 20rem/@size;
+}
+.mmb_login div{
+  border: 1px solid #ccc;
+  text-align: center;
+  height: 100%;
+  line-height: 40rem/@size;
+}
+.mmb_footer{
+  margin-top: 20rem/@size;
+  a{
+    display: block;
+    text-align: center;
+    font-size: 12rem/@size;
+    span:nth-child(1){
+      color: red;
+    }
+    span:nth-child(3){
+      color: #ccc;
+    }
+  }
+  p{
+    text-align: center;
+    color: #ccc;
+    font-size: 12rem/@size;
+  }
+}
+
+//分页
+.list_page {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  padding: 10rem/@size;
+  a:first-child {
+    position: absolute;
+    left: 20rem/@size;
+  }
+  a:last-child {
+    position: absolute;
+    right: 20rem/@size;
+  }
+}
+.pagination {
+  width: 70px;
+  position: absolute;
+  left: 50%;
+  height: 38px;
+  transform: translate(-50%);
+  background-color: #ccc;
+  border-radius: 5px;
+  top: -12rem/@size;
+  select{
+    background-color: @boxcolor;
+    margin-top: 0;
+  }
+}

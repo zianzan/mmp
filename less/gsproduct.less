@@ -1,0 +1,188 @@
+@charset "UTF-8";
+@import "var";
+@import "adapter";
+@import "comment";
+.mmb_search_icon{
+  position: absolute;
+  right:0;
+  top: 60rem/@size;
+  width: 40rem/@size;
+  height: 40rem/@size;
+  border: 1px solid #929292;
+  text-align: center;
+  background-color: #6d6d72;
+  z-index: 999;
+  line-height: 40rem/@size;
+}
+
+
+
+
+
+//下拉框
+.gsproduct_nav{
+  width: 100%;
+  height: 40rem/@size;
+  //大ul
+  .first_nav{
+    height: 100%;
+  }
+  //第一层li
+  .first_nav_li{
+    width: 33.3%;
+    border: 1px solid #929292;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 40rem/@size;
+    position: relative;
+    span{
+      position: absolute;
+      top: 13rem/@size;
+      right: 50rem/@size;
+    }
+    //第二层第一个ul
+   .second_nav1 {
+      position: absolute;
+      top: 40rem/@size;
+     width: 100%;
+     display: none;
+     z-index: 999;
+
+     //第二层li
+     .second_nav_li{
+       border: 1px solid #929292;
+       width: 300%;
+       text-align: left;
+       padding-left: 20rem/@size;
+       background-color: white;
+      position: relative;
+       .gouxuan{
+         position: absolute;
+         top: 10rem/@mmbcolor;
+         right: 10rem/@size;
+         color: @mmbcolor;
+         font-size: 20rem/@size;
+         display: none;
+       }
+    .gouxuannow{
+      display: block;
+    }
+     }
+    }
+  }
+}
+
+//城市ul
+.second_nav2{
+  position: absolute;
+  width: 300%;
+  left: -100%;
+  display: none;
+  z-index: 999;
+  //城市li
+  li{
+    border: 1px solid #929292;
+    text-align: left;
+    padding-left: 20rem/@size;
+    background-color: white;
+    position: relative;
+    .gouxuan{
+      position: absolute;
+      top: 10rem/@mmbcolor;
+      right: 10rem/@size;
+      color: @mmbcolor;
+      font-size: 20rem/@size;
+      display: none;
+      z-index: 999;
+    }
+    .gouxuannow{
+      display: block;
+    }
+  }
+}
+//全部价格ul
+.second_nav3{
+  position: absolute;
+  width: 300%;
+  background-color: green;
+  left: -200%;
+  display: none;
+  z-index: 999;
+  //全部价格li
+  li{
+    border: 1px solid #929292;
+    text-align: left;
+    padding-left: 20rem/@size;
+    background-color: white;;
+    .gouxuan{
+      position: absolute;
+      top: 10rem/@mmbcolor;
+      right: 10rem/@size;
+      color: @mmbcolor;
+      font-size: 20rem/@size;
+    }
+
+  }
+}
+.db{
+  display: block!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+//商品
+.gsproduct_goods {
+  width: 100%;
+  background-color: @boxcolor;
+  padding: 10rem/@size;
+  li {
+    background-color: white;
+    width: 48%;
+    padding: 10rem/@size;
+    //height: 300rem/@size;
+    //border: 1px solid #929292;
+    float: left;
+    margin: 1%;
+    img {
+      width: 174rem/@size;
+      height: 174rem/@size;
+      margin: 0 auto;
+    }
+    p {
+      text-align: center;
+      color: #3c3c3c;
+      display: inline-block;
+      height: 50rem/@size;
+      max-width: 340rem/@size;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  //}商品
+
+  .goods_foot {
+    position: relative;
+    bottom: 5rem/@size;
+    span {
+      color: @mmbcolor;
+      font-size: 20rem/@size;
+    }
+    button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: @mmbcolor;
+      color: white;
+    }
+  }
+}

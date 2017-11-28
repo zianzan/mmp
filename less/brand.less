@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@import "var";
+@import "adapter";
+@import "comment";
+.ranking_word{
+  color: #8a6d3b;
+  font-size: 18rem/@size;
+  background-color: @boxcolor;
+  padding: 8rem/@size;
+  border: 1px solid #929292;
+}
+.ranking_goods li{
+    padding: 10rem/@size;
+  border-bottom: 1px solid #929292;
+  em{
+    background-color: @mmbcolor;
+    width: 20rem/@size;
+    height: 20rem/@size;
+    display: inline-block;
+    text-align: center;
+    line-height: 20rem/@size;
+    font-size: 12rem/@size;
+   color: white;
+  }
+  span{
+    margin-left: 10rem/@size;
+    color: black;
+    font-size: 14rem/@size;
+  }
+  p{
+    margin-left: 30rem/@size;
+    margin-top: 5rem/@size;
+  }
+}
+.average{
+    color: #8a6d3b;
+    font-size: 18rem/@size;
+    background-color: @boxcolor;
+    padding: 8rem/@size;
+    border: 1px solid #929292;
+}
+.new_comment{
+  color: #8a6d3b;
+  font-size: 18rem/@size;
+  background-color: @boxcolor;
+  padding: 8rem/@size;
+  border: 1px solid #929292;
+}
+.ranking_content{
+  .media{
+    border-bottom: 1px solid #3c3c3c;
+    margin: 5rem/@size;
+    padding: 5rem/@size;
+  }
+  img{
+    width: 100rem/@size;
+    height: 100rem/@size;
+  }
+  p{
+    color: black;
+  }
+  .price{
+    margin-top: 20rem/@size;
+    margin-bottom: 10rem/@size;
+    position: relative;
+   em:first-child{
+     font-size: 20rem/@size;
+     color: red;
+   }
+    em:last-child{
+      position: absolute;
+      right: 20rem/@size;
+      color: @mmbcolor;
+    }
+  }
+  span{
+    color: #5e5e5e;
+  }
+}
+.new_conment_content{
+  li{
+    margin: 10rem/@size;
+    img{
+      width: 100rem/@size;
+      height: 100rem/@size;
+      //float: left;
+    }
+  }
+}
+.goods_img span{
+  //display: inline-block;
+  //float: left;
+  margin-left: 10rem/@size;
+  color: #3c3c3c;
+}
+.conment_content{
+  background-color: @boxcolor;
+  margin: 10rem/@size;
+  div{
+    p{
+      word-break: break-all;
+    }
+    position: relative;
+    span{
+      color: @mmbcolor;
+    }
+    i{
+      position: absolute;
+      right: 20rem/@size;
+    }
+  }
+}

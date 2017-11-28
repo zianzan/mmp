@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>凑单品</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+<body>
+<div class="mmb_container">
+    <!--头部-->
+    <div class="mmb_header">
+        <a href="javascript:history.back(-1);" ><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <h4>凑单品</h4>
+        <img class="mmb_app" src="images/header_app.png" alt="">
+        <div class="mmb_search_icon">
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+    </div>
+
+
+    <!--导航下拉框-->
+    <div class="gsproduct_nav">
+        <ul class="first_nav clearfix">
+            <!--商店-->
+            <li class="first_nav_li store_nav"><i>京东</i>
+                <span class="glyphicon glyphicon-triangle-top"></span>
+                <ul class="second_nav1">
+                    <!--挖个商店坑-->
+                </ul>
+            </li>
+            <!--城市-->
+            <li class="first_nav_li city_nav"><i>华北</i>
+                <span class="glyphicon glyphicon-triangle-top"></span>
+                <ul class="second_nav2">
+                    <!--挖个城市坑-->
+                </ul>
+            </li>
+            <!--全部价格-->
+            <li class="first_nav_li price_nav"><i>全部价格</i>
+                <span class="glyphicon glyphicon-triangle-top"></span>
+                <ul class="second_nav3">
+                    <li class="second_nav_li">全部价格
+                        <span class="gouxuan glyphicon glyphicon-ok"></span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <!--商品-->
+<div class="gsproduct_goods">
+    <ul class="clearfix gsproduct_goods_ul">
+       <!--挖个商品坑-->
+    </ul>
+</div>
+
+
+    <!--登录-->
+    <div class="mmb_login">
+        <div class="col-xs-4">登录</div>
+        <div class="col-xs-4">注册</div>
+        <div class="col-xs-4">返回顶部<span class="glyphicon glyphicon-arrow-up"></span></div>
+    </div>
+    <div class="mmb_footer">
+        <a href="index.html">
+            <span>手机APP下载</span>
+            <span>慢慢买手机版</span>
+            <span>--&nbsp掌上比价平台</span>
+        </a>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+
+<script type="text/html" id="tpl1">
+    {{each result v i}}
+    <li class="second_nav_li" data-store-id="{{v.shopId}}" data-store-name="{{v.shopName}}">{{v.shopName}}
+        <span class="gouxuan glyphicon glyphicon-ok"></span>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="tpl2">
+    {{each result v i}}
+    <li class="second_nav_li" data-area-id="{{v.areaId}}" data-area-name="{{v.areaName}}">{{v.areaName}}
+        <span class="gouxuan glyphicon glyphicon-ok"></span>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="tpl3">
+    {{each result v i}}
+    <li>
+        <img src="{{v.productImg}}" alt="">
+        <p>
+            {{v.productName}}
+        </p>
+        <div class="goods_foot">
+            <span>{{v.productPrice}}</span>
+            <button>去凑单</button>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/mui/js/mui.js"></script>
+<script src="js/comment.js"></script>
+<script src="js/gsproduct.js"></script>
+</body>
+</html>

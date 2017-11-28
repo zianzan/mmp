@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>三级分类</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/bijia.css">
+</head>
+<body>
+<div class="mmb_container">
+    <!--头部-->
+    <div class="mmb_header">
+        <a href="index.html"><img class="mmb_logo" src="images/header_logo.png" alt=""></a>
+        <img class="mmb_app" src="images/header_app.png" alt="">
+    </div>
+    <!--搜索-->
+    <div class="mmb_search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+    </div>
+
+    <!--图片内容-->
+    <div class="bijia_content">
+        <!--挖个坑-->
+    </div>
+
+
+        <div class="note">
+            * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>
+        <div class="friend_word">网友评价</div>
+        <div class="friend_evaluate">
+            <ul class="friend_evaluate_content">
+
+            </ul>
+        </div>
+        <div class="more_evaluate">
+            <button>查看更多评价</button>
+        </div>
+
+
+
+
+
+    <!--登录-->
+    <div class="mmb_login">
+        <div class="col-xs-4">登录</div>
+        <div class="col-xs-4">注册</div>
+        <div class="col-xs-4"><span class="glyphicon glyphicon-arrow-up"></span>返回顶部</div>
+    </div>
+    <div class="mmb_footer">
+        <a href="index.html">
+            <span>手机APP下载</span>
+            <span>慢慢买手机版</span>
+            <span>--&nbsp掌上比价平台</span>
+        </a>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+<script type="text/html" id="tpl1">
+    {{each result v i}}
+    <!--面包屑导航-->
+    <div class="list_nav">
+        <div class="list_nav_padding">
+        <a href="index.html">首页</a>
+        <span>&gt;</span>
+        <a href="productlist.html?categoryid={{v.categoryId}}&category={{category}}">{{category}}</a>
+        <span>&gt;</span>
+        <a href="#">{{v.productName}}</a>
+        <span>&gt;</span>
+        </div>
+        <input type="button" value="筛选">
+    </div>
+    <!--内容-->
+    <div class="bijia_product">
+        <h3>{{v.productName}}</h3>
+        <div class="big_goods">{{@v.productImg}}</div>
+    </div>
+
+    <div class="collect_word clearfix">收藏</div>
+
+    <div class="pay_word clearfix">
+        <ul>
+            <li>比价购买</li>
+            <li>产品参数</li>
+            <li>评价(2000)</li>
+        </ul>
+    </div>
+    {{@v.bjShop}}
+    {{/each}}
+</script>
+<script type="text/html" id="tpl2">
+    {{each result v i}}
+    <li>
+        <div class="user_message">
+            <span>{{v.comName}}</span>
+            <span class="user_time">{{v.comTime}}</span>
+        </div>
+        <div class="user_store">
+            <span>{{v.comFrom}}</span>
+        </div>
+        <div class="user_word">
+            <p>{{v.comContent}}</p>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/mui/js/mui.js"></script>
+<script src="js/comment.js"></script>
+<script src="js/bijia.js"></script>
+</body>
+</html>

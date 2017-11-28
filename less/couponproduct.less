@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import "var";
+@import "adapter";
+@import "comment";
+.mmb_header{
+  background-color: #f4483e;
+}
+.couponproduct_content p{
+  color: #929292;
+  text-align: center;
+  font-size: 14rem/@size;
+}
+.media{
+  margin: 10rem/@size;
+  border-bottom: 1px solid @boxcolor;
+}
+.media-left img{
+  width: 100rem/@size;
+  height: 60rem/@size;
+}
+.media-body {
+  div{
+    font-size: 14rem/@size;
+    margin: 5rem/@size;
+    padding: 5rem/@size;
+  }
+div:last-child{
+  color: @mmbcolor;
+  position: relative;
+  span{
+    color: #666;
+    font-size: 16rem/@size;
+    position: absolute;
+    right: 0;
+  }
+}
+}
+
+//遮罩层
+.black_box{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  .backtrack{
+    background-color: @mmbcolor;
+    border: none;
+    color: white;
+    font-size: 60rem/@size;
+    top: 0;
+    left: 0;
+  }
+}
+.now{
+  display: block;
+}
+.black_banner{
+  width: 320rem/@size;
+  height: 360rem/@size;
+  margin: 30rem/@size auto;
+  position: relative;
+  img{
+    width: 200rem/@size;
+    height: 160rem/@size;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    //top: 100rem/@size;
+  }
+  span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50rem/@size;
+    background-color: @mmbcolor;
+    color: white;
+  }
+  .prev_img{
+    left: 0;
+  }
+  .next_img{
+    right: 0;
+  }
+}

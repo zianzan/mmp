@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>功能界面</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/brand.css">
+</head>
+<body>
+<div class="mmb_container">
+    <!--头部-->
+    <div class="mmb_header">
+        <a href="index.html"><img class="mmb_logo" src="images/header_logo.png" alt=""></a>
+        <img class="mmb_app" src="images/header_app.png" alt="">
+    </div>
+
+
+    <!--搜索-->
+    <div class="mmb_search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+    </div>
+    <!--内容-->
+    <div class="productlist_contenr">
+        <!--面包屑导航-->
+        <div class="list_nav">
+            <a href="index.html">首页</a>
+            <span>&gt;</span>
+            <a href="category.html">全部分类</a>
+            <span>&gt;</span>
+            <input type="button" value="筛选">
+        </div>
+
+        <!--排行榜标题-->
+        <div class="ranking_word">
+            平板电视哪个牌子好
+        </div>
+        <div class="ranking_goods">
+            <ul class="ranking_goods_ul">
+            <!--挖个坑-->
+            </ul>
+        </div>
+        <div class="average">
+            平板电视产品销量排行
+        </div>
+        <!--商品排行-->
+        <div class="ranking_content">
+            <!--挖个商品坑-->
+        </div>
+
+        <div class="new_comment">
+            最新评论
+        </div>
+        <div class="new_conment_content">
+            <ul class="conment_content_ul">
+                <!--挖个评论坑-->
+            </ul>
+        </div>
+
+
+    </div>
+
+    <!--登录-->
+    <div class="mmb_login">
+        <div class="col-xs-4">登录</div>
+        <div class="col-xs-4">注册</div>
+        <div class="col-xs-4"><span class="glyphicon glyphicon-arrow-up"></span>返回顶部</div>
+    </div>
+    <div class="mmb_footer">
+        <a href="index.html">
+            <span>手机APP下载</span>
+            <span>慢慢买手机版</span>
+            <span>--&nbsp掌上比价平台</span>
+        </a>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+
+
+<script type="text/html" id="tpl1">
+    {{each result v i}}
+    <a href="productlist.html?categoryid={{v.categoryId}}&pageid=1">
+        <li>
+            <div>
+                <em>{{v.brandId}}</em>
+                <span>{{v.brandName}}</span>
+                <p>{{v.brandInfo}}</p>
+            </div>
+        </li>
+    </a>
+    {{/each}}
+</script>
+
+<script type="text/html" id="tpl2">
+{{each result v i}}
+    <a href="bijia.html?productid={{v.productId}}">
+        <div class="media">
+            <div class="media-left">
+               {{@v.productImg}}
+            </div>
+            <div class="media-body">
+                <p>{{v.productName}}</p>
+                <div class="price"><em>{{v.productPrice}}</em><em>☆☆☆☆☆</em></div>
+                <span>{{v.productQuote}}&nbsp;&nbsp;</span><span>{{v.productCom}}</span>
+            </div>
+        </div>
+    </a>
+    {{/each}}
+</script>
+<!--<script type="text/html" id="tpl3">-->
+    <!--{{each result v i}}-->
+    <!--<li>-->
+        <!--<div class="goods_img">-->
+            <!--{{@v.productImg}}-->
+            <!--<span>{{v.productName}}</span>-->
+        <!--</div>-->
+        <!--<div class="conment_content">-->
+            <!--&lt;!&ndash;挖个评论坑&ndash;&gt;-->
+        <!--</div>-->
+    <!--</li>-->
+    <!--{{/each}}-->
+<!--</script>-->
+<!--<script type="text/html" id="tpl4">-->
+    <!--{{each result v i}}-->
+    <!--<div>{{v.comName}}&nbsp;:&nbsp;<span>☆☆☆☆☆</span><i>{{v.comTime}}</i></div>-->
+    <!--<p>{{v.comContent}}</p>-->
+    <!--{{/each}}-->
+<!--</script>-->
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/mui/js/mui.js"></script>
+<script src="js/comment.js"></script>
+
+<script src="js/brand.js"></script>
+
+</body>
+</html>

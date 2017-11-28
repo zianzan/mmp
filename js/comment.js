@@ -1,0 +1,26 @@
+var tools = {
+    getParamObj: function () {
+        //location.search可以获取到地址栏的参数
+        //获取地址栏的参数，封装成一个对象，方便使用
+        //1. 通过search获取到参数
+        //"?name=hucc&age=18&desc=cool"
+        var search = location.search;
+        //2. 把?干掉
+        //"name=hucc&age=18&desc=cool"
+        search = search.slice(1);
+        //3. 对 & 进行切割，得到一个数组
+        var searchArr = search.split("&");
+        var searchObj = {};
+        for (var i = 0; i < searchArr.length; i++) {
+            var key = searchArr[i].split("=")[0];
+            //decodeURI:可以把地址栏中中文解码成中文
+            var value = decodeURI(searchArr[i].split("=")[1]);
+            //把属性名和值存储到对象中
+            searchObj[key] = value;
+        }
+        return searchObj;
+    },
+    getParam: function (key) {
+        return this.getParamObj()[key];
+    }
+};

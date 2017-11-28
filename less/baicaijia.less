@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@import "var";
+@import "adapter";
+@import "comment";
+.mmb_header{
+  background-color: #f4483e;
+}
+.mmb_search_icon{
+  position: absolute;
+  right:0;
+  top: 60rem/@size;
+  width: 38rem/@size;
+  height: 38rem/@size;
+  border: 1px solid #929292;
+  text-align: center;
+  background-color: #6d6d72;
+  z-index: 999;
+}
+.baicaijia_nav span{
+  padding-bottom: 5rem/@size;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+  color: red;
+  border:0;
+  span{
+    border-bottom: 2px solid red;
+  }
+}
+
+//商品
+.baicai_product{
+  .media{
+    padding: 10rem/@size;
+  }
+  width: 100%;
+  .media-left{
+    float: left;
+    img{
+      width: 120rem/@size;
+      height: 120rem/@size;
+    }
+  }
+  .media-body{
+    position: relative;
+    p:nth-child(1){
+        font-size: 13rem/@size;
+        color: #0f0f0f;
+      }
+    P:nth-child(2){
+      color: red;
+      font-size: 25rem/@size;
+      i,em{
+        font-size: 12rem/@size;
+        margin-left: 10rem/@size;
+      }
+      del{
+        font-size: 14rem/@size;
+        color: #555;
+        margin-left: 10rem/@size;
+      }
+    }
+    .get a{
+      color: red;
+      border: 1px dashed red;
+      font-size: 12rem/@size;
+    }
+    .bar i{
+      color: white;
+      border: 1px solid red;
+      background-color: pink;
+      padding-left: 40rem/@size;
+      padding-right: 40rem/@size;
+      margin-right: 10rem/@size;
+      border-radius: 10px;
+      position: relative;
+      &:before{
+        content: "";
+        display: block;
+        width: 17px;
+        height: 17px;
+        background-color: red;
+        position: absolute;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+      }
+    }
+    b{
+      color: #b92c28;
+    }
+    }
+    .right_button a{
+      position: absolute;
+      right: 20rem/@size;
+      bottom:10rem/@size;
+      background-color: rgba(255,0,0,.7);
+      border-radius: 5rem/@size;
+      color: white;
+      padding: 5rem/@size;
+    }
+  }
+
+

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+@import "var";
+@import "adapter";
+@import "comment";
+
+.inlan_product{
+  width:100%;
+  li{
+    width: 50%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    float: left;
+    padding: 10rem/@size;
+    height: 350rem/@size;
+    position: relative;
+    img{
+      width: 140rem/@size;
+      height: 140rem/@size;
+      margin: 0 auto;
+    }
+    p{
+      word-break: break-all;
+      font-size: 20rem/@size;
+      margin: 5rem/@size;
+    }
+  }
+.red_price{
+  color: @mmbcolor;
+ margin: 5rem/@size;
+}
+  .from_store{
+    position: absolute;
+    bottom: 10rem/@size;
+  }
+  span{
+    color: #929292;
+  }
+}
+
